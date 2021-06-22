@@ -6,6 +6,14 @@ package first;
  * @description
  */
 public class NineTwo {
+
+    /**
+     * 方法一：单独把链表切出来
+     * @param head
+     * @param left
+     * @param right
+     * @return
+     */
     public ListNode reverseBetween(ListNode head, int left, int right) {
         // 假的头节点，防止分类讨论
         ListNode fakeHead = new ListNode(-1);
@@ -36,8 +44,16 @@ public class NineTwo {
         return fakeHead.next;
     }
 
-    public ListNode reverseBetween2(){
-        
+
+    /**
+     * 方法二：穿针引线法
+     * @param head
+     * @param left
+     * @param right
+     * @return
+     */
+    public ListNode reverseBetween2(ListNode head, int left, int right){
+        return null;
     }
 
     /**
@@ -57,7 +73,7 @@ public class NineTwo {
         }
     }
 
-    public class ListNode {
+    public static class ListNode {
         int val;
         ListNode next;
         ListNode(){}
