@@ -10,9 +10,6 @@ import org.junit.Test;
 public class TestDemo {
     @Test
     public void testNineTwo(){
-        NineTwo nineTwo = new NineTwo();
-        NineTwo.ListNode head = new NineTwo.ListNode(1);
-        NineTwo.ListNode res = nineTwo.reverseBetween(head,2,6);
 
     }
 
