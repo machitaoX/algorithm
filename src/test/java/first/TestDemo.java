@@ -17,6 +17,11 @@ public class TestDemo {
     public void testNineThree(){
         NineThree nineThree = new NineThree();
         System.out.println(nineThree.restoreIpAddresses("25525511135"));
+    }
 
+    @Test
+    public void testNineSeven(){
+        NineSeven nineSeven = new NineSeven();
+        System.out.println(nineSeven.isInterleave("aabcc","dbbca","aadbbcbcac"));
     }
 }
