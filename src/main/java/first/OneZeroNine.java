@@ -8,6 +8,7 @@ package first;
  **/
 public class OneZeroNine {
     public TreeNode sortedListToBST(ListNode head) {
+        System.out.println("test");
         return dfs(head, null);
     }
 
