@@ -23,7 +23,7 @@ public class TwoZeroSeven {
         }
         for (int i = 0; i < numCourses && valid; i++) {
             if (visited[i] == 0) {
-
+                dfs(i);
             }
         }
         return valid;
