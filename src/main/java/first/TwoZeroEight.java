@@ -14,7 +14,7 @@ public class TwoZeroEight {
     class Trie {
         Set<String> items;
 
-        public Trie() {
+        private Trie() {
             items = new HashSet<>();
         }
 
