@@ -12,13 +12,12 @@ import java.util.concurrent.locks.ReentrantLock;
 public class OneOneOneFour {
     class Foo {
         private ReentrantLock lock;
-        private Condition condition1;
         private Condition condition2;
         private Condition condition3;
+        int one = 0, two = 0;
 
         public Foo() {
             lock = new ReentrantLock();
-            condition1 = lock.newCondition();
             condition2 = lock.newCondition();
             condition3 = lock.newCondition();
         }
@@ -29,8 +28,8 @@ public class OneOneOneFour {
             lock.lock();
             try {
                 printFirst.run();
+                one = 1;
                 condition2.signal();
-                condition1.await();
             } catch (Exception e) {
 
             }finally {
@@ -44,9 +43,12 @@ public class OneOneOneFour {
             // printSecond.run() outputs "second". Do not change or remove this line.
             lock.lock();
             try {
+                if (one != 1) {
+                    condition2.await();
+                }
                 printSecond.run();
+                two = 1;
                 condition3.signal();
-                condition2.await();
             } catch (Exception e) {
 
             }finally {
@@ -58,9 +60,10 @@ public class OneOneOneFour {
 
             lock.lock();
             try {
+                if (two != 1) {
+                    condition3.await();
+                }
                 printThird.run();
-                condition1.signal();
-                condition3.await();
             } catch (Exception e) {
 
             }finally {
