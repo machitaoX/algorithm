@@ -1,0 +1,1 @@
+select tmp.Email from (select Email, sum(1) as b group by Email) as tmp where tmp.b > 1
