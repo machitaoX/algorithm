@@ -8,6 +8,6 @@ package second;
  **/
 public class SevenThreeSix {
     public int evaluate(String expression) {
-
+        return 0;
     }
 }
