@@ -1,7 +1,5 @@
 package third;
 
-import org.junit.jupiter.api.Test;
-
 /**
  * @author machitao
  * @date 2022/10/13
@@ -51,8 +49,7 @@ public class Five {
         return result;
     }
 
-    @Test
     public void test() {
-        System.out.println(longestPalindrome("babad"));
+
     }
 }
