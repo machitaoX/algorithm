@@ -24,7 +24,7 @@ public class OneNine {
         return fakeHead.next;
     }
 
-    public class ListNode {
+    private class ListNode {
         int val;
         ListNode next;
         ListNode() {}
